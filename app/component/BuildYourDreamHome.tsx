@@ -20,7 +20,7 @@ const BuildYourDreamHome: FC<BuildYourDreamHomeProps> = ({}) => {
         <p className="bg-[#FD665E] w-fit p-4 text-white rounded">Free consultation</p>
       </span>
 
-      <img src='/public/img/large_image.png' alt='illustration' />
+      <img src='/img/large_image.png' alt='illustration' />
     </div>
   );
 };

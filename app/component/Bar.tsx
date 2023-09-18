@@ -3,14 +3,19 @@
 import type { FC } from "react";
 import NavList from "./NavList";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 
 interface BarProps {
   clickhandler: any;
 }
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
 const Bar: FC<BarProps> = ({ clickhandler }) => {
   return (
-    <nav className="absolute top-0 right-0 bg-[#FD665E] py-8 px-10 text-lg font-semibold rounded-bl-xl md:hidden flex flex-col gap-6 items-start w-[60vw] h-[100%]">
+    <nav
+      className={`absolute top-0 right-0 bg-[#FD665E] py-8 px-10 text-lg font-semibold rounded-bl-xl md:hidden flex flex-col gap-6 items-start w-[60vw] h-[100%]  ${inter.variable} font-sans`}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="30"

@@ -9,8 +9,8 @@ import { useState } from "react";
 
 interface navbarProps {}
 
-const inter = Inter({ subsets: ["latin"] });
-const playfair = Playfair({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair({ subsets: ["latin"], variable: "--font-playfair" });
 
 const Navbar: FC<navbarProps> = ({}) => {
   const [display, setDisplay] = useState(false);
@@ -31,7 +31,7 @@ const Navbar: FC<navbarProps> = ({}) => {
         height={70}
         className="hidden md:block"
       />
-      <nav className="hidden md:block">
+      <nav className={`hidden md:block ${inter.variable} font-sans`}>
         <NavList />
       </nav>
 
